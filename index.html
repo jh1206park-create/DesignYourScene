@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Design Your Scene</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <div class="app">
 
-        <header>
-            <h1>Design Your Scene</h1>
-            <p>당신의 공간을 원하는 장면으로</p>
-        </header>
+<div class="app">
 
-        <section class="scenes">
-            <h2>SCENE</h2>
 
-            <div class="scene-group">
-                <h3>🏠 집</h3>
+    <header>
 
-                <div class="scene-row">
-                    <button>☀️<span>기상</span></button>
-                    <button>🚪<span>외출</span></button>
-                    <button>🏠<span>귀가</span></button>
-                    <button>🌙<span>취침</span></button>
-                </div>
-            </div>
+        <h1>
+            Design Your Scene
+        </h1>
 
-            <div class="scene-group">
-                <h3>🏢 사무실</h3>
+        <p>
+            부르는 순간, 나만의 공간
+        </p>
 
-                <div class="scene-row">
-                    <button>🚪<span>출근</span></button>
-                    <button>🌙<span>퇴근</span></button>
-                </div>
-            </div>
+        <p
+            id="customer-name"
+            class="customer-name"
+        >
+            공간 정보를 불러오는 중...
+        </p>
 
-        </section>
+    </header>
 
-        <section class="room">
 
-            <h2>거실</h2>
+    <!-- =================================================
+         SCENE
+    ================================================== -->
 
-            <div class="device">
-                <span>💡 조명</span>
-                <span class="status on">ON</span>
-            </div>
+    <section class="scenes">
 
-            <div class="device">
-                <span>❄️ 에어컨</span>
-                <span class="status off">OFF</span>
-            </div>
+        <h2>
+            SCENE
+        </h2>
 
-            <div class="device">
-                <span>🪟 커튼</span>
-                <span class="status off">CLOSED</span>
-            </div>
+        <div id="scene-container"></div>
 
-        </section>
+        <div id="api-result"></div>
 
-        <section class="room">
+    </section>
 
-            <h2>침실</h2>
 
-            <div class="device">
-                <span>💡 조명</span>
-                <span class="status off">OFF</span>
-            </div>
+    <!-- =================================================
+         DEVICE
+    ================================================== -->
 
-            <div class="device">
-                <span>❄️ 에어컨</span>
-                <span class="status off">OFF</span>
-            </div>
+    <section class="devices">
 
-        </section>
+        <h2>
+            DEVICE
+        </h2>
 
-    </div>
+        <div id="device-container"></div>
 
-    <script src="app.js"></script>
+    </section>
+
+
+</div>
+
+
+<script src="app.js"></script>
+
 
 </body>
+
 </html>

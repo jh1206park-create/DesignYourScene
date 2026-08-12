@@ -2,94 +2,495 @@
     box-sizing: border-box;
 }
 
+
 body {
+
     margin: 0;
-    font-family: Arial, sans-serif;
+
+    font-family:
+        Arial,
+        "Noto Sans KR",
+        sans-serif;
+
     background: #f5f5f5;
+
     color: #222;
 }
 
+
+/* =========================================================
+   APP
+========================================================= */
+
 .app {
-    max-width: 480px;
-    margin: auto;
-    padding: 28px 20px;
+
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px 50px;
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header {
-    margin-bottom: 35px;
+
+    margin-bottom: 38px;
 }
+
 
 header h1 {
+
     font-size: 25px;
-    margin-bottom: 8px;
+
+    margin: 0 0 8px;
+
+    font-weight: 700;
 }
+
 
 header p {
+
     color: #777;
+
     margin: 0;
+
+    font-size: 14px;
 }
+
+
+.customer-name {
+
+    margin-top: 9px !important;
+
+    font-size: 13px !important;
+
+    color: #999 !important;
+}
+
+
+/* =========================================================
+   MAIN SECTION TITLE
+========================================================= */
 
 h2 {
-    font-size: 14px;
+
+    font-size: 17px;
+
     letter-spacing: 2px;
-    color: #888;
-    margin-bottom: 15px;
+
+    color: #222;
+
+    margin: 0 0 20px;
+
+    font-weight: 700;
 }
 
+
+/* =========================================================
+   SCENE
+========================================================= */
+
+.scenes {
+
+    margin-bottom: 42px;
+}
+
+
 .scene-group {
+
     margin-bottom: 25px;
 }
 
+
 .scene-group h3 {
-    font-size: 16px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #777;
+
     margin: 0 0 10px 2px;
 }
 
+
 .scene-row {
+
     display: flex;
+
     gap: 8px;
+
+    flex-wrap: wrap;
 }
+
 
 .scene-row button {
-    flex: 0 0 calc(25% - 6px);
-    height: 65px;
+
+    flex: 1 1 0;
+
+    min-width: 70px;
+
+    height: 64px;
+
     border: none;
-    border-radius: 14px;
+
+    border-radius: 13px;
+
     background: white;
+
     font-size: 18px;
+
     cursor: pointer;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.12s,
+        box-shadow 0.12s;
 }
 
+
+.scene-row button:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.09);
+}
+
+
+.scene-row button:active {
+
+    transform: scale(0.97);
+}
+
+
 .scene-row button span {
+
     display: block;
-    font-size: 12px;
+
+    font-size: 11px;
+
     margin-top: 5px;
 }
 
-.room {
-    margin-top: 35px;
+
+.scene-icon {
+
+    font-size: 18px;
 }
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+#api-result {
+
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+
+#api-result.success {
+
+    color: #2d9b55;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DEVICE
+========================================================= */
+
+.devices {
+
+    margin-top: 0;
+}
+
+
+.device-location {
+
+    margin-bottom: 32px;
+}
+
+
+.device-location > h3 {
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #777;
+
+    margin: 0 0 14px 2px;
+}
+
+
+/* =========================================================
+   ROOM
+========================================================= */
+
+.room {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 23px;
+}
+
+
+.room h4 {
+
+    width: 100%;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #999;
+
+    margin: 0 0 3px 3px;
+}
+
+
+/* =========================================================
+   DEVICE CARD
+========================================================= */
 
 .device {
+
+    width: 72px;
+
+    height: 62px;
+
+    padding: 6px 4px;
+
     background: white;
-    padding: 18px;
-    margin-bottom: 10px;
-    border-radius: 14px;
+
+    border-radius: 9px;
+
     display: flex;
-    justify-content: space-between;
+
+    flex-direction: column;
+
     align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0, 0, 0, 0.045);
 }
+
+
+.device-name {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+}
+
+
+.device-icon {
+
+    font-size: 13px;
+
+    line-height: 1;
+}
+
+
+.device-name span:last-child {
+
+    font-size: 9px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   DEVICE STATUS
+========================================================= */
 
 .status {
+
+    margin-top: 4px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.status.on {
+
+    color: #2d9b55;
+}
+
+
+.status.off {
+
+    color: #aaa;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 360px;
+
+    background: white;
+
+    padding: 35px 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.login-brand {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+.login-subtitle {
+
+    font-size: 13px;
+
+    color: #888;
+
+    margin-bottom: 30px;
+}
+
+
+.input-group {
+
+    margin-bottom: 16px;
+}
+
+
+.input-group label {
+
+    display: block;
+
     font-size: 12px;
-    font-weight: bold;
+
+    color: #666;
+
+    margin-bottom: 7px;
 }
 
-.on {
-    color: green;
+
+.input-group input {
+
+    width: 100%;
+
+    height: 45px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 9px;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+
+    outline: none;
 }
 
-.off {
-    color: #999;
+
+.input-group input:focus {
+
+    border-color: #999;
+}
+
+
+.login-button {
+
+    width: 100%;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    margin-top: 5px;
+}
+
+
+.login-error {
+
+    min-height: 20px;
+
+    margin-top: 12px;
+
+    text-align: center;
+
+    color: #d55;
+
+    font-size: 12px;
 }
